@@ -13,6 +13,8 @@ class MarketRepositoryClass
         $this->marketiModel = $marketiModel;
     }
 
+    //FUNKCIJA ZA DOBIJANJE PODATAKA O SVIM MARKETIMA,UKLJUCUJUCI I PODATKE ZA GRAD U KOJEM SE MARKET NALAZI,PREKO FUNKCIJE "market_u_gradu" koja se nalazi u modelu MarketModel
+
     public function sviMarketi(){
         try {
             $marketi = MarketiModel::with(['market_u_gradu'])->get();

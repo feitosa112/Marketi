@@ -13,6 +13,7 @@ class GradRepositoryClass
         $this->gradModel = $gradModel;
     }
 
+    //funkcija za dobijanje informacija o gradovima koje imamo u bazi
     public function sviGradovi(){
         try {
             $sviGradovi = GradModel::all();
