@@ -19,4 +19,11 @@ class MarketController extends Controller
         $sviMarketi = $this->marketRepo->sviMarketi();
         return response()->json($sviMarketi);
    }
+
+   //funkcija koja vraca podatke o marketu,dobijene preko funkcije "izabraniMarket" u MarketrepositoryClass
+
+   public function izabraniMarket($id){
+    $market = $this->marketRepo->izabraniMarket($id);
+    return response()->json($market);
+   }
 }

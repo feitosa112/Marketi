@@ -14,4 +14,7 @@ Route::controller(GradController::class)->group(function(){
 
 Route::controller(MarketController::class)->group(function(){
     Route::get('/sviMarketi','sviMarketi')->name('svi marketi');//ruta za dobijanje informacija o svim marketima
+
+    Route::get('/market/{id}','izabraniMarket')->name('izabraniMarket');//ruta za ispis podataka o izabranom marketu na osnovu id
+
 });

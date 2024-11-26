@@ -26,4 +26,19 @@ class MarketRepositoryClass
 
         }
     }
+
+
+    //Funkcija za dobijanje podataka za odredjeni market na osnovu id
+
+    public function izabraniMarket($id){
+        try {
+            $market = MarketiModel::find($id);
+            if($market){
+                return $market;
+            }
+        }catch(\Exception $e){
+            return response()->json(['message' => 'Greska prilikom ucitavanja informacija o marketu'], 500);
+
+        }
+    }
 }
